@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "taskforge",
+  "description": "Opus piensa, Haiku construye: specs que un modelo barato ejecuta sin improvisar.",
+  "owner": {
+    "name": "LianDev00",
+    "url": "https://github.com/LianDev00"
+  },
+  "plugins": [
+    {
+      "name": "taskforge",
+      "description": "Un modelo fuerte diseña la arquitectura en una SPEC-TF; un modelo menor la construye sin improvisar.",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}
