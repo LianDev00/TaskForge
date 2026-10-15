@@ -1,0 +1,11 @@
+{
+  "name": "taskforge",
+  "version": "1.0.0",
+  "description": "Opus piensa, Haiku construye. Specs ejecutables (SPEC-TF) para código que dura años.",
+  "author": {
+    "name": "LianDev00",
+    "url": "https://github.com/LianDev00"
+  },
+  "license": "MIT",
+  "keywords": ["spec", "arquitectura", "haiku", "opus", "mantenibilidad"]
+}
