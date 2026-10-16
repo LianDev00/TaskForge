@@ -54,10 +54,14 @@ SPEC-TF v1 — [Nombre del proyecto]
      produce un output). El Constructor no adelanta fases.
      Columna Modelo: fases mecánicas (cableado, migraciones, boilerplate, tests derivados
      del contrato) → Haiku. Fases con lógica real (núcleo de negocio, contratos de §5) →
-     Sonnet. Si dudas, Sonnet: una fase mal construida cuesta más que la diferencia de precio. -->
-| Fase | Qué se construye | Modelo | Cómo se verifica al terminar |
-|---|---|---|---|
-| 1 | | | |
+     Sonnet. Si dudas, Sonnet: una fase mal construida cuesta más que la diferencia de precio.
+     Columna Carril: fases que pueden correr en paralelo contra un contrato de §5 ya fijado
+     comparten fase y llevan carriles distintos (A, B...); si todo es secuencial, "—".
+     Columna Archivos propios: rutas que SOLO ese carril escribe. Dos carriles nunca
+     comparten archivo: en paralelo se pisan. -->
+| Fase | Carril | Qué se construye | Modelo | Archivos propios | Cómo se verifica al terminar |
+|---|---|---|---|---|---|
+| 1 | — | | | | |
 
 ## 7. Criterios de aceptación
 <!-- Comportamientos observables y testeables, no cualidades vagas.
@@ -94,5 +98,6 @@ Si una decisión no está cubierta por esta spec: NO improvises arquitectura.
 - ¿Cada decisión de §3 tiene porqué y alternativa descartada? Una decisión sin porqué será deshecha.
 - ¿Las interfaces de §4 tienen firmas exactas con tipos, no descripciones vagas?
 - ¿Cada fase de §6 termina en algo verificable por sí solo, y tiene modelo asignado?
+- ¿Los carriles paralelos de §6 tienen archivos propios disjuntos y dependen solo de contratos de §5 ya fijados?
 - ¿Los criterios de §7 son comprobables sin interpretación?
 - ¿La spec cabe en la cabeza? Si supera ~2 páginas por módulo o ~6 fases, divídela en varias SPEC-TF.

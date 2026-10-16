@@ -76,7 +76,8 @@ Corre con `effort: high` aunque seas Haiku — el default `medium` está pensado
 3. **Construye en el orden de fases de la spec.** Cada fase termina en el entregable verificable que la spec define. No adelantes trabajo de fases futuras.
 4. **Regla de escalación — la más importante:** si encuentras una decisión que la spec no cubre, NO improvises arquitectura. Para y pregunta al usuario, o si es menor, marca en el código `// TODO-ARQUITECTO: [decisión pendiente + tu propuesta]` y sigue con lo que sí está definido. Improvisar diseño en modo Constructor es el fallo número uno de este flujo. Todo `TODO-ARQUITECTO` vuelve al modelo Arquitecto, no a otro Constructor más capaz: subir de Haiku a Sonnet para resolverlo es improvisar arquitectura con otro nombre.
 5. **Dentro de cada módulo, el código más corto que cumple.** La spec decide *qué* módulos existen; tú eliges la implementación con la escalera (sección Taller). Si un atajo deliberado tiene un límite conocido, márcalo: `// TF-TECHO: [límite] → [cómo mejorarlo cuando haga falta]`.
-6. **Al terminar, corre la Definición de Terminado** del checklist y reporta: fases completadas, criterios de aceptación verificados, la lista de `TODO-ARQUITECTO` y la de `TF-TECHO` si los hubo.
+6. **Carriles en paralelo.** Si §6 tiene carriles independientes y los equipos de agentes están activos (`CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS`), el líder lanza un compañero por carril con el modelo de su fila, y cada uno escribe solo en sus *Archivos propios*. Un `TODO-ARQUITECTO` se envía como mensaje al líder y el compañero espera la decisión en vez de seguir. Sin equipos, o con fases secuenciales, construye en orden en una sola sesión: un equipo para trabajo secuencial solo suma costo.
+7. **Al terminar, corre la Definición de Terminado** del checklist y reporta: fases completadas, criterios de aceptación verificados, la lista de `TODO-ARQUITECTO` y la de `TF-TECHO` si los hubo.
 
 ---
 
