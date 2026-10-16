@@ -19,7 +19,7 @@ if ($Carril) {
         "Ante un TODO-ARQUITECTO: lee el nombre de sesion en .tf-arquitecto, enviale la pregunta con SendMessage (incluye tu carril y tu nombre de sesion, que ves con ListAgents) " +
         "y no construyas esa parte hasta recibir su respuesta; mientras, sigue con lo que la spec si define."
     }
-    claude --model $Modelo $prompt
+    claude --dangerously-skip-permissions --model $Modelo $prompt
     return
 }
 
